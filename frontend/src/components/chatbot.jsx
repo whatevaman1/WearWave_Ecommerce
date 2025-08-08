@@ -71,8 +71,8 @@ Now, please provide a focused, friendly, and specific response based on the user
 }
 
 // 3) Gemini API details
-const GEMINI_API_KEY = "AIzaSyAXZo70C22UzyQCKkV5-6Z9ddt9unDki7k";
-const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}';
 
 const Chatbot = () => {
   const [query, setQuery] = useState('');
